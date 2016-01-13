@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title!= title        
+    body
+        h1!= title
+        #container
+            form(method='post')
+                .inputan
+                    label Merek
+                    if data.merek
+                        input(type='text', name='merek', value=data.merek)
+                    else
+                        input(type='text', name='merek')
+                .inputan
+                    label Warna
+                    if data.warna
+                        input(type='text', name='warna', value=data.warna)
+                    else
+                        input(type='text', name='warna')
+                .inputan
+                    label Ukuran
+                    if data.ukuran                    
+                        input(type='text', name='ukuran', value=data.ukuran)
+                    else
+                        input(type='text', name='ukuran')
+                button(type='submit') Simpan

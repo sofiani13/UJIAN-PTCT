@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title!= title
+  body
+    h1!= title
+    #container
+    div
+        table
+            thead
+                tr
+                    th= 'Merek'
+                    th= 'Warna'
+                    th= 'Ukuran'
+                    th= 'Aksi'
+            tbody
+                for item in data
+                    tr
+                        td= item.merek
+                        td= item.warna
+                        td= item.ukuran
+                        td 
+                            a(href="/baju/ubah/"+item.id) Ubah
+                            a(href="/baju/hapus/"+item.id) Hapus
+        a(class='button', href='/baju/tambah') Tambah Baju    
